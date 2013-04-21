@@ -5689,7 +5689,7 @@
 
                 foreach (Person p in damage.SourceTroop.Persons)
                 {
-                    if (p == this.Leader || GameObject.Chance(50))
+                    if (p == damage.SourceTroop.Leader || GameObject.Chance(50))
                     {
                         p.TroopBeDamageDealt += damage.CounterDamage;
                     }
@@ -5716,14 +5716,14 @@
 
             foreach (Person p in damage.SourceTroop.Persons)
             {
-                if (p == this.Leader || GameObject.Chance(50))
+                if (p == damage.SourceTroop.Leader || GameObject.Chance(50))
                 {
                     p.TroopDamageDealt += damage.Damage;
                 }
             }
             foreach (Person p in damage.DestinationTroop.Persons)
             {
-                if (p == this.Leader || GameObject.Chance(50))
+                if (p == damage.DestinationTroop.Leader || GameObject.Chance(50))
                 {
                     p.TroopBeDamageDealt += damage.Damage;
                 }
