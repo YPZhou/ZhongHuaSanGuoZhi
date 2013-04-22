@@ -2806,10 +2806,15 @@
                     }
                 }
             }
-            if (this.IsCaptive && this.BelongedCaptive.LocationArchitecture != null && 
-                this.loyalty <= this.BelongedCaptive.LocationArchitecture.captiveLoyaltyFallThreshold)
+            if (this.IsCaptive && this.BelongedCaptive.LocationArchitecture != null)
             {
-                this.DecreaseLoyalty(this.BelongedCaptive.LocationArchitecture.captiveLoyaltyExtraFall);
+                foreach (KeyValuePair<int, int> pair in this.BelongedCaptive.LocationArchitecture.captiveLoyaltyFall)
+                {
+                    if (this.Loyalty < pair.Key)
+                    {
+                        this.Loyalty -= pair.Value;
+                    }
+                }
             }
         }
 
