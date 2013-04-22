@@ -2646,8 +2646,8 @@ namespace WorldOfTheThreeKingdoms.GameScreens
         {
             if (base.EnableUpdate)
             {
-                try
-                {
+                /*try
+                {*/
                     
                     this.UpdateCount++;
                     base.Update(gameTime);
@@ -2751,7 +2751,7 @@ namespace WorldOfTheThreeKingdoms.GameScreens
 
 
                     }
-                }
+                /*}
                 catch (OutOfMemoryException)
                 {
                     this.mainMapLayer.freeTilesMemory();
@@ -2759,7 +2759,7 @@ namespace WorldOfTheThreeKingdoms.GameScreens
                 catch (InvalidOperationException)
                 {
                     this.mainMapLayer.freeTilesMemory();
-                }
+                }*/
 
             }
         }
